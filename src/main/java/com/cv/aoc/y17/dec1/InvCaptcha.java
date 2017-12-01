@@ -10,14 +10,15 @@ public class InvCaptcha {
         sol.prob2();
 
     }
+
     public void prob1() throws Exception {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String digits = in.readLine();
         int len = digits.length();
         int sum = 0;
-        for(int i = 0; i < len; i++) {
+        for (int i = 0; i < len; i++) {
             int thisDig = (int) digits.charAt(i) - '0';
-            int nextDig = (int) digits.charAt(i == len-1?0:i+1) -'0';
+            int nextDig = (int) digits.charAt(i == len - 1 ? 0 : i + 1) - '0';
             if (thisDig == nextDig) {
                 sum += thisDig;
             }
@@ -31,10 +32,10 @@ public class InvCaptcha {
         String digits = in.readLine();
         int len = digits.length();
         int sum = 0;
-        for(int i = 0; i < len; i++) {
+        for (int i = 0; i < len; i++) {
             int thisDig = (int) digits.charAt(i) - '0';
-            int destination = (i + (len/2))%len;
-            int nextDig = (int) digits.charAt(destination) -'0';
+            int destination = (i + (len / 2)) % len;
+            int nextDig = (int) digits.charAt(destination) - '0';
             if (thisDig == nextDig) {
                 sum += thisDig;
             }
