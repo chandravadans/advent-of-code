@@ -43,6 +43,4 @@ public class InvCaptcha {
         System.out.println(sum);
         in.close();
     }
-
-
 }
