@@ -1,4 +1,4 @@
-package com.gs.eq1d.analytics;
+package com.cv.aoc.y17.dec10;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
-public class AoC10 {
+public class KnotHash {
     public static void main(String[] args) {
 
-        AoC10 sol = new AoC10();
+        KnotHash sol = new KnotHash();
 
         //sol.prob1();
         sol.prob2();
