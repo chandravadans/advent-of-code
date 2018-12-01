@@ -46,7 +46,7 @@ public class ChronalCalibration {
                                 acc[0] = r;
                                 seen.add(r);
                             } else {
-                                seen.add(Integer.MIN_VALUE);            // Acts as a sentinnel to stop calculation
+                                seen.add(Integer.MIN_VALUE);            // Acts as a sentinel to stop calculation
                                 System.out.println("Shorted at " + f + " for " + r + " on run number " + thisRunNumber);
                                 resultArr.add(r);                       // Records final value when short circuited
                             }
@@ -56,7 +56,7 @@ public class ChronalCalibration {
                         result1[0] += result2[0];
                         return result1;
                     },
-                    total -> total[0]                                   // Finaliser. Transformation on the final accumulator
+                    total -> total[0]                                   // Finalizer. Transformation on the final accumulator
             ));
         }
         return resultArr.get(0);
