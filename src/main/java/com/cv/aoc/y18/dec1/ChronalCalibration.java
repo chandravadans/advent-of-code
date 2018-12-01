@@ -27,21 +27,21 @@ public class ChronalCalibration {
     }
 
     int prob2(Stream<String> inp) {
-        List<String> inpList = inp.collect(Collectors.toList()); // So that we can keep processing this stream
+        List<Integer> inpList = inp.map(Integer::parseInt).collect(Collectors.toList()); // So that we can keep processing this stream
         Set<Integer> seen = new HashSet<>();
         List<Integer> resultArr = new ArrayList<>();
         seen.add(0);
         int sum = 0;
         int runNumber = 1;
         while (!seen.contains(Integer.MIN_VALUE)) {
-            Stream<String> inputStream = inpList.stream();
+            Stream<Integer> inputStream = inpList.stream();
             final int prevSum = sum;
             final int thisRunNumber = runNumber++;
             sum = inputStream.collect(Collector.of(
                     () -> new int[]{prevSum},                           // Generator. 'Seed' accumulator
                     (acc, f) -> {                                       // Accumulator. Adding an element to an existing accumulator
                         if (!seen.contains(Integer.MIN_VALUE)) {
-                            int r = acc[0] + Integer.parseInt(f);
+                            int r = acc[0] + f;
                             if (!seen.contains(r)) {
                                 acc[0] = r;
                                 seen.add(r);
@@ -58,6 +58,7 @@ public class ChronalCalibration {
                     },
                     total -> total[0]                                   // Finalizer. Transformation on the final accumulator
             ));
+
         }
         return resultArr.get(0);
     }
