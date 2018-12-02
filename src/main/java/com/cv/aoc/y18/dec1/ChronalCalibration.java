@@ -10,6 +10,8 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+// https://adventofcode.com/2018/day/1
+
 public class ChronalCalibration {
     public static void main(String[] args) throws Exception {
         ChronalCalibration sol = new ChronalCalibration();

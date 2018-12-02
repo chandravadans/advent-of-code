@@ -8,6 +8,9 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+
+// https://adventofcode.com/2018/day/2
+
 public class InventoryManagementSystem {
     public static void main(String[] args) throws IOException {
         InventoryManagementSystem sol = new InventoryManagementSystem();
