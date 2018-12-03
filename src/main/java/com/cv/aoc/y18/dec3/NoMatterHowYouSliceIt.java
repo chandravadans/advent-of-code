@@ -68,15 +68,14 @@ public class NoMatterHowYouSliceIt {
             int ydim = parsed[3];
             final List<Boolean> overlappingClaim = new ArrayList<>();
             overlappingClaim.add(false);
-            IntStream.range(x, x + xdim).forEach(i -> {
-                IntStream.range(y, y + ydim).forEach(j -> {
-                    if (!overlappingClaim.get(0)) {
-                        if (map[i][j] == STATUS.OVERLAPPED) {
-                            overlappingClaim.set(0, true);
+            IntStream.range(x, x + xdim).forEach(i ->
+                    IntStream.range(y, y + ydim).forEach(j -> {
+                        if (!overlappingClaim.get(0)) {
+                            if (map[i][j] == STATUS.OVERLAPPED) {
+                                overlappingClaim.set(0, true);
+                            }
                         }
-                    }
-                });
-            });
+                    }));
             if (!overlappingClaim.get(0)) {
                 res.add(in);
             }
