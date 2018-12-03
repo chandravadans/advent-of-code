@@ -16,7 +16,7 @@ public class NoMatterHowYouSliceIt {
     enum STATUS {
         FREE,
         CLAIMED,
-        OVERLAPPED
+        OVERLAPPING
     }
 
     private STATUS[][] map = new STATUS[1007][1007];
@@ -52,7 +52,7 @@ public class NoMatterHowYouSliceIt {
                         if (map[i][j] == STATUS.FREE) {
                             map[i][j] = STATUS.CLAIMED;
                         } else if (map[i][j] == STATUS.CLAIMED) {
-                            map[i][j] = STATUS.OVERLAPPED;
+                            map[i][j] = STATUS.OVERLAPPING;
                             overlaps[0]++;
                         }
 
@@ -77,7 +77,7 @@ public class NoMatterHowYouSliceIt {
             IntStream.range(x, x + xdim).forEach(i ->
                     IntStream.range(y, y + ydim).forEach(j -> {
                         if (!overlappingClaim.get(0)) {
-                            if (map[i][j] == STATUS.OVERLAPPED) {
+                            if (map[i][j] == STATUS.OVERLAPPING) {
                                 overlappingClaim.set(0, true);
                             }
                         }
