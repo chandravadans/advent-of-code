@@ -33,6 +33,12 @@ public class NoMatterHowYouSliceIt {
     int prob1(Stream<String> inp) {
         int[] overlaps = {0};
 
+        IntStream.range(0, map.length).forEach(i ->
+                IntStream.range(0, map[0].length).forEach(j ->
+                        map[i][j] = STATUS.FREE
+                )
+        );
+
         List<String> input = inp.collect(Collectors.toList());
 
         input.forEach(in -> {
@@ -68,15 +74,14 @@ public class NoMatterHowYouSliceIt {
             int ydim = parsed[3];
             final List<Boolean> overlappingClaim = new ArrayList<>();
             overlappingClaim.add(false);
-            IntStream.range(x, x + xdim).forEach(i -> {
-                IntStream.range(y, y + ydim).forEach(j -> {
-                    if (!overlappingClaim.get(0)) {
-                        if (map[i][j] == STATUS.OVERLAPPED) {
-                            overlappingClaim.set(0, true);
+            IntStream.range(x, x + xdim).forEach(i ->
+                    IntStream.range(y, y + ydim).forEach(j -> {
+                        if (!overlappingClaim.get(0)) {
+                            if (map[i][j] == STATUS.OVERLAPPED) {
+                                overlappingClaim.set(0, true);
+                            }
                         }
-                    }
-                });
-            });
+                    }));
             if (!overlappingClaim.get(0)) {
                 res.add(in);
             }
