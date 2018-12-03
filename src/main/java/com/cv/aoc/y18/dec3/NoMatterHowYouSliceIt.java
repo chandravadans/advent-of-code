@@ -26,8 +26,8 @@ public class NoMatterHowYouSliceIt {
         /*Stream<String> inp = Stream.of("#1 @ 1,3: 4x4",
                 "#2 @ 3,1: 4x4",
                 "#3 @ 5,5: 2x2");*/
-        Stream<String> inp = Files.lines(Paths.get("src/main/resources/2018_3.txt"));
-        System.out.println(sol.prob1(inp));
+        System.out.println(sol.prob1(Files.lines(Paths.get("src/main/resources/2018_3.txt"))));
+        System.out.println(sol.prob2(Files.lines(Paths.get("src/main/resources/2018_3.txt"))));
     }
 
     int prob1(Stream<String> inp) {
