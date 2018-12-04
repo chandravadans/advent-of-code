@@ -11,6 +11,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+// https://adventofcode.com/2018/day/4
+
 class ReposeRecord {
 
     Map<String, Long> idVsNaptime = new HashMap<>();
