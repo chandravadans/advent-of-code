@@ -19,7 +19,7 @@ class ReposeRecord {
     Map<String, int[]> idVsNapFrequencyByMinute = new HashMap<>();
 
     public static void main(String[] args) throws Exception {
-        ReposeRecord sol = new Scratch();
+        ReposeRecord sol = new ReposeRecord();
         sol.prob1(Files.lines(Paths.get("src/main/resources/2018_4.txt")));
         sol.prob2();
     }
