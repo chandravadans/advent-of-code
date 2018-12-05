@@ -75,7 +75,7 @@ class ReposeRecord {
                            getMax(idVsNapFrequencyByMinute.get(laziestGuard))[0]);
     }
 
-    // Max idx, max val
+    // Max index, max val
     int[] getMax(int[] arr) {
         int[] res = new int[2];
         int max = Integer.MIN_VALUE;
