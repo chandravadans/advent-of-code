@@ -27,15 +27,7 @@ class Day1Solver {
 
     static int solve2(Stream<Integer> modules) {
         return modules
-                .map(module -> {
-                    int moduleResult = 0;
-                    int remaining = fuelValue(module);
-                    while (remaining > 0) {
-                        moduleResult += remaining;
-                        remaining = fuelValue(remaining);
-                    }
-                    return moduleResult;
-                })
+                .map(module -> Stream.iterate(fuelValue(module), fuel -> fuel > 0, Day1Solver::fuelValue).reduce(Integer::sum).orElse(0))
                 .reduce(0, Integer::sum);
     }
 
