@@ -32,6 +32,6 @@ class Day1Solver {
     }
 
     private static int fuelValue(int val) {
-        return (int) (Math.floor(((double) val / 3) - 2));
+        return (int) Math.max(Math.floor(((double) val / 3) - 2), 0);
     }
 }
