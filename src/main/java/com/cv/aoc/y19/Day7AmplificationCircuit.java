@@ -105,6 +105,7 @@ class Day7Solver {
             halted[0] = true;
         }
         int i = 1;
+        //Run as long as there's atleast one comp halted
         while (anyCompsHalted(halted)) {
             System.out.println("Setting memory for " + i);
             List<Integer> memory = i == 0 ? computers.get(4).getMemory() : computers.get(i - 1).getMemory();
