@@ -3,6 +3,6 @@ This repository contains my attempts to solve the excellent [Advent of Code chal
 It's an annual ritual I like to have, and I've had a varying degrees of success with the challenges over the years.
 
 ### Structure
-Each year's challenges are checked into the repository on different branch corresponding to that particular year. 2017's
+Solutions to all challenges of an year are checked into the repository on the branch named as that year. 2017's
 solutions are on the branch `2017`, for example. The main branch doesn't contain any solutions, and is devoid of everything
-but a `HelloAoC` program that very helpfully adds two numbers that it's handed over.
+but the `HelloAoC` program that very helpfully adds two numbers that it is handed over.
