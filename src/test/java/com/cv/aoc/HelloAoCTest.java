@@ -1,16 +1,18 @@
 package com.cv.aoc;
 
-import org.junit.Before;
-import org.junit.Test;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static java.lang.Integer.MAX_VALUE;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HelloAoCTest {
 
     private HelloAoC underTest;
 
-    @Before
+    @BeforeEach
     public void setup() {
         underTest = new HelloAoC();
     }
