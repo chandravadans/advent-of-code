@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Day01CalorieCountingTest {
 
-    Day01CalorieCounting underTest;
+    private Day01CalorieCounting underTest;
 
     @ParameterizedTest
     @MethodSource("argsPart1")
