@@ -1,6 +1,5 @@
 package com.cv.aoc;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static java.lang.Character.isDigit;
@@ -21,7 +20,7 @@ public class Dec01Trebuchet {
                 .sum();
     }
 
-    int getCalibrationValue(String input) {
+    private int getCalibrationValue(String input) {
         char first = 0, last = 0;
         for (char c : input.toCharArray()) {
             if (isDigit(c)) {
@@ -32,14 +31,14 @@ public class Dec01Trebuchet {
                 }
             }
         }
-        //Only one digit was found, double up the digit that was
+        //Only one digit was found, double it up
         if (last == 0) {
             last = first;
         }
         return Character.getNumericValue(first) * 10 + Character.getNumericValue(last);
     }
 
-    int getCalibrationValue2(String input) {
+    private int getCalibrationValue2(String input) {
         //Overlaps are overly annoying
         return getCalibrationValue(input.replaceAll("one", "one1one")
                 .replaceAll("two", "two2two")
